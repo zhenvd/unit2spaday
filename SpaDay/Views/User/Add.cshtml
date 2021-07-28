@@ -1,0 +1,41 @@
+﻿@{
+}
+@model AddUserViewModel
+@using SpaDay.ViewModel
+
+<h1>Sign Up Form</h1>
+
+<form asp-controller="User" asp-action="Add" method="post" >
+    Username:
+    <br>
+    <div>
+        <label asp-for="Username" /></label>
+        <input asp-for="Username"/>
+        <span asp-validation-for="Username"></span>
+    </div>
+    <br>
+    Email:
+    <br>
+    <div>
+        <label asp-for="ContactEmail" /></label>
+        <input asp-for="ContactEmail" />
+        <span asp-validation-for="ContactEmail"></span>
+    </div>
+    <br>
+    Password:
+    <div>
+        <label asp-for="Password" /></label>
+        <input asp-for="Password" type="password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <br>
+    Confirm Password:
+    <br>
+    <div>
+        <label asp-for="VerifyPassword" /></label>
+        <input asp-for="VerifyPassword" type="password" />
+        <span asp-validation-for="VerifyPassword"></span>
+    </div>
+    <br>
+    <input type='submit' value='Submit'>
+</form>
